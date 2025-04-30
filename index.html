@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+    
+          background-color: #f4f4f9;
+        }
+        select {
+          width: 110px;
+          padding: 2px 10px;
+          font-size: 16px;
+          border: 2px solid #ccc;
+          border-radius: 8px;
+          background-color: #fff;
+          appearance: none;
+          background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+          background-repeat: no-repeat;
+          background-position-x: 95%;
+          background-position-y: 50%;
+          cursor: pointer;
+          transition: border 0.3s ease;
+        }
+        .search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-left: 9px;
+}
+
+.search-container input{
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  background-color: transparent;
+}
+      </style>
+    <header class="">
+        <div class=" bg-[#F2F4F7] min-h-[32px] ">
+            <nav class="container flex gap-[20px] justify-around">
+                <div class="flex gap-[10px] items-center">
+                    <img src="./assets/location.svg" alt="">
+                    <p class="flex gap-[2px]">Shahar: <span>Toshkent</span></p>
+                    <p>Topshirish punktlari</p>
+                </div>
+                <div>
+                    <p class="opacity-[.67]">Buyurtmangizni 1 kunda bepul yetkazib beramiz!</p>
+                </div>
+                <div class="flex gap-[10px]">
+                    <p>Savol-javoblar</p>
+                    <p>Buyurtmalarim</p>
+                </div>
+                <div class="flex">
+                    <img src="./assets/uz.svg" alt="">
+                    <select name="" id="" class="border">
+                        <option value="">O'zbekcha</option>
+                        <option value="">English</option>
+                        <option value="">Ruscha</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+      
+        <div class="container flex items-center justify-between gap-[20px]">
+            <div>
+                <img src="./assets/header-main-logo.svg" alt="">
+            </div>
+            <div class="flex items-center gap-[20px] border-[#F2F4F7] ">
+                <button class="flex items-center"><img src="./assets/div.catalog-icon_margin.svg" alt="">Katalog</button>
+                <div class="flex  search-container"  >
+                    <input type="text" placeholder="Mahsulotlar va turkumlar izlash">
+                    <img src="./assets/div.slot search.svg" alt="">
+                </div>
+            </div>
+            <div class="flex items-center gap-[15px]">
+                <div class="flex items-center">
+                    <img src="./assets/SVG_margin kirish.svg" alt="">
+                    <span>Kirish</span>
+                </div>
+                <div class="flex items-center">
+                    <img src="./assets/saralanganlar.svg" alt="">
+                    <span>Saralangan</span>
+                </div>
+                <div class="flex items-center">
+                    <img src="./assets/SVG_margin card.svg" alt="">
+                    <span>Savat</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container flex items-center justify-between">
+            <div class="flex  gap-[10px]">
+                <img src="./assets/union.png muddatli tolov.svg" alt="">
+               <p class="">Muddatli to'lov</p>
+               <p class="text-[gray] opaciy-[.67]">Elektronika</p>
+               <p class="text-[gray] opaciy-[.67]">Maishiy texnika</p>
+               <p class="text-[gray] opaciy-[.67]">Kiyim</p>
+               <p class="text-[gray] opaciy-[.67]">Poyabzallar</p>
+               <p class="text-[gray] opaciy-[.67]">Aksessuarlar</p>
+               <p class="text-[gray] opaciy-[.67]">Gozallik va Parvarish</p>
+               <p class="text-[gray] opaciy-[.67]">Salomatlik</p>
+               <p class="text-[gray] opaciy-[.67]">Uy-rozg'or buyumlari</p>
+               <p class="text-[gray] opaciy-[.67]">Qurilish va tamirlash</p>
+            </div>
+            <select name="" id="">
+                <option value="">Yana</option>
+            </select>
+        </div>
+        <div class="hero container">
+            <img class="rounded-lg" src="./assets/div.swiper-slide shaxzoda.svg" alt="">
+        </div>
+    </header>
+
+    <div class="footer container flex items-center justify-between ">
+        <ul class="flex flex-col gap-[10px]">
+            <li>Biz haqimizda</li>
+            <li class="opacity-[.67]">Topshirish punktlari</li>
+            <li class="opacity-[.67]">Vakansiyalar</li>
+        </ul>
+        <ul  class="flex flex-col gap-[10px]">
+            <li>Foydalanuvchtylarga</li>
+            <li class="opacity-[.67]">Biz bilan bog'lash</li>
+            <li class="opacity-[.67]">Savol-Javob</li>
+        </ul>
+        <ul  class="flex flex-col gap-[10px]">
+            <li>Tadbirkorlartya</li>
+            <li class="opacity-[.67]">Uzumda soting</li>
+            <li class="opacity-[.67]">Sotuvchi kabinetiga kirish</li>
+        </ul>
+        <ul  class="flex flex-col gap-[6px]">
+            <li>Ilovani yuklab olish</li>
+            <li><img src="./assets/google play.svg" alt=""></li>
+            <li>Uzum ijtimoiy tarmoqlarda</li>
+           <li class="flex ">
+            <img src="./assets/instagram1.svg" alt="">
+            <img src="./assets/telegram.svg" alt="">
+            <img src="./assets/youtube.svg" alt="">
+            <img src="./assets/facebook.svg" alt="">
+           </li>
+        </ul>
+    </div>
+    <div class="h-[1px] w-full bg-[gray] ">
+    </div>
+    <div class="container flex items-center justify-between">
+        <div class="flex gap-[10px]">
+            <p class="bold">Maxfiylik kelishuvi</p>
+            <p class="bold">Foydalanuvchi kelishuvi</p>
+        </div>
+        <div>
+            <p class="opacity-[.67]">«2024© XK MCHJ «UZUM MARKET». STIR 309376127. Barcha huquqlar himoyalangan»t</p>
+        </div>
+    </div>
+</body>
+</html>
