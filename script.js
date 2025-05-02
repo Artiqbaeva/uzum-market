@@ -9,7 +9,6 @@ function getProduct(){
                 })
     })
 }
-
 function setProduct(array){
 
     for(let i = 0; i < array.length; i++){
