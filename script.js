@@ -10,13 +10,13 @@ function getProduct(){
     })
 }
 function setProduct(array){
-
     for(let i = 0; i < array.length; i++){
         product.innerHTML += ` <div class="latest-watch">
                         <img src="${array[i].images[0]}" alt="">
                         <h4>${array[i].title}</h4>
                         <span class="horizontal">${array[i].price}</span><span>$255.00
                         </span>
+                        <br>
                     </div>`
     }
 }

@@ -5,55 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uzum Market</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="https://play-lh.googleusercontent.com/CsOjLbIX7Pg8NUjf5U6Gtqdst1KMm7MbKdMpeo47Qiz4qA7Y7MDiXbbrtr4d7pR2ToA">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="https://play-lh.googleusercontent.com/CsOjLbIX7Pg8NUjf5U6Gtqdst1KMm7MbKdMpeo47Qiz4qA7Y7MDiXbbrtr4d7pR2ToA">
 </head>
 <body>
-    <style>
-        body {
-          font-family: Arial, sans-serif;
-          background-color: #f4f4f9;
-        }
-        select {
-          width: 110px;
-          padding: 2px 10px;
-          font-size: 16px;
-          border: 2px solid #ccc;
-          border-radius: 8px;
-          background-color: #fff;
-          appearance: none;
-          background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-          background-repeat: no-repeat;
-          background-position-x: 95%;
-          background-position-y: 50%;
-          cursor: pointer;
-          transition: border 0.3s ease;
-        }
-        .search-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  max-width: 300px;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 8px 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  margin-left: 9px;
-}
-
-.search-container input{
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  padding: 6px 10px;
-  background-color: transparent;
-}
-      </style>
-    <header class="">
-        <div class=" bg-[#F2F4F7] min-h-[32px] ">
-            <nav class="container flex gap-[20px] justify-around">
+    <header class="mt-[20px] container">
+        <div class=" bg-[#F2F4F7] min-h-[34px] mt-[20px]">
+            <nav class="container flex gap-[20px] justify-between">
                 <div class="flex gap-[10px] items-center">
                     <img src="./assets/location.svg" alt="">
                     <p class="flex gap-[2px]">Shahar: <span>Toshkent</span></p>
@@ -70,14 +28,12 @@
                     <img src="./assets/uz.svg" alt="">
                     <select name="" id="" class="border">
                         <option value="">O'zbekcha</option>
-                        <option value="">English</option>
                         <option value="">Ruscha</option>
                     </select>
                 </div>
             </nav>
         </div>
-      
-        <div class="container flex items-center justify-between gap-[20px]">
+        <div class="flex items-center justify-between gap-[20px] mt-[10px]">
             <div>
                 <img src="./assets/header-main-logo.svg" alt="">
             </div>
@@ -103,9 +59,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="container flex items-center justify-between">
-            <div class="flex  gap-[10px]">
+        <div class=" flex items-center justify-between mb-[10px]">
+            <div class="flex  gap-[10px] text">
                 <img src="./assets/union.png muddatli tolov.svg" alt="">
                <p class="">Muddatli to'lov</p>
                <p class="text-[gray] opaciy-[.67]">Elektronika</p>
@@ -122,22 +77,21 @@
                 <option value="">Yana</option>
             </select>
         </div>
-        <div class="hero container">
+        <div class="hero ">
             <img class="rounded-lg" src="./assets/div.swiper-slide shaxzoda.svg" alt="">
         </div>
     </header>
     <main>
         <section>
             <div class="container">
+                <div>
+                    <h1 class="text-[32px] m-[20px] opacity-[.9]">Mashhur ></h1>
+                </div>
                 <div class="latest-watch-wrapper">
                 </div>
             </div>
       </section>
     </main>
-
-    <div class="footer container flex items-center justify-between ">
-        
-    </div>
+    <footer>
+    </footer>
     <script src="./script.js"></script>
-</body>
-</html>
