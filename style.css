@@ -18,87 +18,69 @@ li {
 a {
   text-decoration: none;
 }
-img {
-  max-width: 100%;
-}
-.apple-watch {
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  height: 170px;
-  gap: 14px;
-  border-radius: 9px;
-}
-.apple-watch h2 {
-  font-size: 30px;
-  color: #1e1d1d;
-}
-.apple-watch p {
-  color: #8b8e99;
-}
-.latest-watch h3 {
-  color: #1e1d1d;
-}
-.latest-watch img {
-  margin-top: 8px;
-  margin-bottom: 4px;
-}
-.latest-watch {
-  text-align: center;
- margin: 10px;
-  height: 380px;
-  border-radius: 10px;
-  background: #dddfe4;
-}
 
-.latest-watch-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
-}
-.client-text{
-    text-align: center;
-    margin-top: 30px;
+.skeleton,
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
-.client-text {
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.36px;
+.skeleton__item,
+.card
+.latest-watch-wrapper{
+    padding: 16px;
+    box-shadow: 0 0 14px #0002;
+    border-radius: 10px;
 }
-.client-text h2{
-    font-size: 23px;
-    margin-top: 10px;
-}
-.client-card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
+.skeleton__image,
+.card img
+.latest-watch img{
     width: 100%;
-    height: 200px;
-    border-radius:10px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
 }
-.client-box h2{
-    font-size: 16px;
+.skeleton__image{
+    background: #ddd;
 }
-.client-text-box p{
-    color: #8B8E99;
-    margin: 10px 0;
-    font-size: 12px;
+.skeleton__text{
+    width: 80%;
+    height: 24px;
+    background: #ddd;
+    margin-top: 12px;
+    border-radius: 10px;
 }
-.client-box{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+.skeleton__text:last-child{
+    width: 50%;
+}
+.skeleton__animation{
+    background: linear-gradient(90deg, #eee, #ccc, #eee);
+    background-size: 200%;
+    animation: skeleton 1.5s linear  infinite  ;
+}
+@keyframes skeleton {
+    to{
+        background-position: 200%;
+    }
+}
+.latest-watch {
+  gap: 12px;
+  margin: 8px;
+  padding: 16px;
+  height: 380px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: .5s;
+}
+.latest-watch-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
 }
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
 }
 select {
   width: 110px;
@@ -127,7 +109,6 @@ padding: 8px 10px;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 margin-left: 9px;
 }
-
 .search-container input{
 flex: 1;
 border: none;
@@ -138,4 +119,132 @@ background-color: transparent;
 }
 .text{
   text-wrap: nowrap;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container{
+  max-width: 1280px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.users,
+.skeleton,
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.skeleton__item,
+.card{
+  padding: 16px;
+  box-shadow: 0 0 14px #0002;
+  border-radius: 10px;
+}
+.skeleton__image,
+.card img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.skeleton__image{
+  background: #ddd;
+}
+.skeleton__text{
+  width: 80%;
+  height: 24px;
+  background: #ddd;
+  margin-top: 12px;
+  border-radius: 10px;
+}
+.skeleton__text:last-child{
+  width: 50%;
+}
+.skeleton__animation{
+  background: linear-gradient(90deg, #eee, #ccc, #eee);
+  background-size: 200%;
+  animation: skeleton 1.5s linear  infinite  ;
+}
+
+@keyframes skeleton {
+  to{
+      background-position: 200%;
+  }
+}
+
+
+.loading{
+  display: flex;
+  justify-content: center;
+}
+.lds-facebook,
+.lds-facebook div {
+box-sizing: border-box;
+}
+.lds-facebook {
+display: inline-block;
+position: relative;
+width: 80px;
+height: 80px;
+}
+.lds-facebook div {
+display: inline-block;
+position: absolute;
+left: 8px;
+width: 16px;
+background: currentColor;
+animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+left: 8px;
+animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+left: 32px;
+animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+left: 56px;
+animation-delay: 0s;
+}
+@keyframes lds-facebook {
+0% {
+  top: 8px;
+  height: 64px;
+}
+50%, 100% {
+  top: 24px;
+  height: 32px;
+}
+}
+.collection{
+display: flex;
+overflow: auto;
+gap: 12px;
+list-style: none;
+}
+.collection li{
+text-wrap: nowrap;
+background: #ddd;
+padding: 6px 16px;
+border-radius: 8px;
+cursor: pointer;
+}
+.latest-watch h4{
+  padding-top: 10px;
+}
+.box{
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+}
+.box img{
+  width: 100%;
 }
