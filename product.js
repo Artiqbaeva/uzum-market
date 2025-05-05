@@ -11,6 +11,7 @@ function getProductWithId(id){
                     <h4>${data.title}</h4>
                     <span class="horizontal">${data.price}</span><span>$255.00
                     </span>
+                    <p>${data.description}</p>
                     <br>`
                 })
     })
