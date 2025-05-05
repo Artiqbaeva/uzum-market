@@ -251,3 +251,23 @@ cursor: pointer;
 .btn-seemore{
   margin: 0 auto;
 }
+.category {
+  text-wrap: nowrap;
+  gap: 10px;
+  text-transform: capitalize ;
+  margin-bottom: 10px;
+}
+.scroll-box::-webkit-scrollbar {
+  height: 6px;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+}
+.scroll-box::-webkit-scrollbar-track {
+  background-color: lightgray;
+}
+.scroll-box {
+  width: 100%; 
+  overflow-x: auto;    
+  white-space: nowrap; 
+}

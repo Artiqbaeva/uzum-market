@@ -8,6 +8,7 @@ let categories = []
 let limitEl = 10;
 
 window.onload = () => {
+    getTags();
     getProduct()
 }
 
@@ -21,6 +22,7 @@ function getProduct(){
                 })
     })
 }
+
 function setProduct(array){
     skeletonEl.innerHTML = "";
 
@@ -39,6 +41,7 @@ function setProduct(array){
         
     }
 }
+
 function renderSkeleton(count){
     const fragment = document.createDocumentFragment()
     Array(count).fill("").forEach(()=>{
@@ -79,6 +82,7 @@ function getProductsWithTag(tag) {
                 })
     })
 }
+
 function getTags() {
     fetch(`https://dummyjson.com/products/category-list`)
     .then((res)=>{
