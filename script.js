@@ -1,7 +1,10 @@
 const product = document.querySelector(".latest-watch-wrapper")
 const skeletonEl = document.querySelector(".skeleton")
 const wrapperEl = document.querySelector(".wrapper")
+const categoryEl = document.querySelector(".category")
 const seeMore = document.querySelector(".btn-seemore")
+
+let categories = []
 let limitEl = 10;
 
 window.onload = () => {
@@ -63,4 +66,37 @@ seeMore.addEventListener('click', (e) => {
     limitEl += 10;
     product.innerHTML = null;
     getProduct();
+})
+
+function getProductsWithTag(tag) {
+    renderSkeleton(8);
+    fetch(`https://dummyjson.com/products/category/${tag}?limit=${limitEl}`)
+    .then((res)=>{
+        res.json()
+                .then((data)=>{
+                    product.innerHTML = null;
+                    setProduct(data.products);
+                })
+    })
+}
+function getTags() {
+    fetch(`https://dummyjson.com/products/category-list`)
+    .then((res)=>{
+        res.json()
+                .then((data)=>{
+                    categories = data;
+                    for (let i = 0; i < data.length; i++) {
+                        let li = document.createElement("li");
+                        li.className = "category-li"
+                        li.innerHTML = data[i];
+                        categoryEl.appendChild(li);
+                    }
+                })
+    })
+}
+
+categoryEl.addEventListener("click", (e)=>{
+    if(e.target.className == "category-li"){
+        getProductsWithTag(e.target.textContent)
+    }
 })
